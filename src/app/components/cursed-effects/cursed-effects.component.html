@@ -1,0 +1,15 @@
+<section class="center">
+    <div *ngIf='pwd.pwd!=="uxiono"; else content'>
+        <mat-form-field appearance="fill">
+            <mat-label>Renta?</mat-label>
+            <input matInput [(ngModel)]="pwd.pwd">
+        </mat-form-field>
+    </div>
+    <ng-template #content>
+        <div class="responsive">
+            <img id="triggered" src="assets/triggered.png" alt="">
+            <img id="linkbff" src="assets/linkbff.png" alt="">
+            <img id="bern" src="assets/bernal1.png" alt="">
+        </div>
+    </ng-template>
+</section>
