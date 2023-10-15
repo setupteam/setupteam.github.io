@@ -9,21 +9,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { CursedEffectsComponent } from './components/cursed-effects/cursed-effects.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RulesComponent,
-    CursedEffectsComponent
+    CursedEffectsComponent,
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,13 +8,14 @@ import { IRule } from '../interfaces/Rule.model';
   styleUrls: ['./rules.component.css']
 })
 export class RulesComponent implements OnInit {
-  rules:IRule[]
+  rules!:IRule[]
 
   constructor(private rulesS:RulesService) {
-    this.rules = this.rulesS.get()
+    this.rulesS.list().subscribe(rules => this.rules = Object.entries(rules).map(r => r[1]))
   }
 
   ngOnInit(): void {
   }
+
 
 }

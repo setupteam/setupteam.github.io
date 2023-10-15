@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginDialogComponent } from '../components/login-dialog/login-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,6 @@ export class HomeComponent implements OnInit {
   }
 
   openDialog() {
-    //const dialogRef = this.dialog.open(LoginDialogComponent, {});
+    const dialogRef = this.dialog.open(LoginDialogComponent);
   }
-
 }

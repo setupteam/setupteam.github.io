@@ -1,0 +1,17 @@
+.example-full-width {
+    width: 100%;
+}
+
+.bt-log {
+    display: flex;
+    justify-content: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h2 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+button {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
