@@ -14,6 +14,11 @@ export class RulesComponent implements OnInit {
     this.rulesS.list().subscribe(rules => this.rules = Object.entries(rules).map(r => r[1]))
   }
 
+  ruleClick(event: Event){
+    let el = event.target as Element;
+    el.textContent += '  🥵';
+  }
+
   ngOnInit(): void {
   }
 
