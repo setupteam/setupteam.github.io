@@ -12,6 +12,14 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
   login(user:any){
-    return this.http.post<IAuthRes>(this.apiEndpoint + "login", user)
+    return this.http.post<IAuthRes>(this.apiEndpoint + "login", user, {
+      withCredentials: true
+    })
+  }
+
+  logout(){
+    return this.http.get<IAuthRes>(this.apiEndpoint + "logout", {
+      withCredentials: true
+    })
   }
 }

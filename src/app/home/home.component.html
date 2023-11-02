@@ -35,7 +35,12 @@
                 </ul>
             </div>
             <div class="login-dialog ">
-                <button mat-button (click)="openDialog() " style="color: white; border-color: rgba(255, 255, 255, 0); ">Login</button>
+                <button *ngIf="!user" mat-button (click)="openDialog()" style="color: white; border-color: rgba(255, 255, 255, 0); ">Login</button>
+                <button *ngIf="user" mat-button style="color: white; border-color: rgba(255, 255, 255, 0);" [matMenuTriggerFor]="beforeMenu">{{ user.nickname }}</button>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                    <button mat-menu-item [routerLink]="['dashboard']">Dashboard</button>
+                    <button mat-menu-item (click)="logout()">Cerrar sesion</button>
+                </mat-menu>
             </div>
         </div>
     </nav>

@@ -10,6 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 const modules = [
     MatSidenavModule,
@@ -22,12 +23,13 @@ const modules = [
     MatDialogModule,
     MatIconModule,
     MatMenuModule,
-    MatListModule
+    MatListModule,
+    MatToolbarModule,
   ];
 
 @NgModule({
-    imports: [... modules],
-    exports: [... modules],
+    imports: [...modules],
+    exports: [...modules],
     providers: []
 })
 

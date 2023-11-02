@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Inject } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -33,7 +33,7 @@ export class LoginDialogComponent {
       password: this.passwordFormControl.value as string
     }).subscribe(res=>{
       if(res.isOK){
-        this.data.callbacks.onSuccess(res.token)
+        this.data.callbacks.onSuccess()
       }else{
         
       }

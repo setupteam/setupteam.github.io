@@ -13,7 +13,9 @@ export class ApiService <E> {
   }
 
   list(){
-    return this.http.get<E[]>(`${ this.url }`)
+    return this.http.get<E[]>(`${ this.url }`,{
+      withCredentials: true
+    })
   }
 
   getTest(){

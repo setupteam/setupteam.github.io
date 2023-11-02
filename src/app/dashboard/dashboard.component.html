@@ -1,1 +1,42 @@
-<p>dashboard works!</p>
+<div class="main-container">
+    <mat-toolbar color="primary">
+        <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>SetupTeam</span>
+        <span class="toolbar-spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item routerLink="/">Landing</button>
+            <button mat-menu-item (click)="logout()">Cerrar sesion</button>
+        </mat-menu>
+    </mat-toolbar>
+
+    <mat-drawer-container hasBackdrop="true" style="flex: 1;">
+        <mat-drawer #drawer mode="over" style="width: 300px;">
+            <mat-list>
+                <mat-list-item routerLink="rules">
+                    <mat-icon matListItemIcon>book</mat-icon>
+                    <div matListItemTitle>Reglas</div>
+                </mat-list-item>
+
+                <mat-list-item routerLink="permissions">
+                    <mat-icon matListItemIcon>shield</mat-icon>
+                    <div matListItemTitle>Permisos</div>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <mat-icon matListItemIcon>shield</mat-icon>
+                    <div matListItemTitle>Insignias</div>
+                </mat-list-item>
+            </mat-list>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div class="main-content">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>
