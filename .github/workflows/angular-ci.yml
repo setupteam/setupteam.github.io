@@ -29,6 +29,9 @@ jobs:
 
       - name: Copy index.html to 404.html
         run: cp ./dist/setup-team-page/index.html ./dist/setup-team-page/404.html
+      
+      - name: Generate CNAME file
+        run: echo "setupteam.dev" > ./dist/setup-team-page/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
