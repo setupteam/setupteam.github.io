@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #220054;
+$secondary: #946AD4;
+$shiny: #CBA9FE;
+$alternative: #6538A9;
+$strong: #3F157F;
+$emphasis: #6538A9;
+$complementary: #545100;
+$support: #235400;
+$serious: #000C54;
+$contrast: #3D0054;
+$base: #060054;
+$calm: #001554;
+$bright: #54004C;
+
+:root{
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.text-primary{
+    color: $primary;
+}
+
+.text-secondary{
+    color: $secondary;
+}
+
+.bg-shiny{
+    background-color: $shiny;
+}
+
+.fill-shiny{
+    fill: $shiny;
+}
