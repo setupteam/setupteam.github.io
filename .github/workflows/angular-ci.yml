@@ -28,13 +28,13 @@ jobs:
         run: ng build
 
       - name: Copy index.html to 404.html
-        run: cp ./dist/setupteam.github.io/index.html ./dist/setupteam.github.io/404.html
+        run: cp ./dist/setupteam.github.io/browser/index.html ./dist/setupteam.github.io/browser/404.html
       
       - name: Generate CNAME file
-        run: echo "setupteam.dev" > ./dist/setupteam.github.io/CNAME
+        run: echo "setupteam.dev" > ./dist/setupteam.github.io/browser/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/setupteam.github.io
+          publish_dir: ./dist/setupteam.github.iobrowser/
