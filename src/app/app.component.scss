@@ -1,3 +1,5 @@
+@use "../styles.scss" as styles;
+
 .engine-container{
     width: 100%;
     height: 100vh;
@@ -10,7 +12,7 @@
 .rotate-engine {
     transform-origin: center;
     top: 50%;
-    left: 50%;
+    left: 33.33%;
     animation: rotate-engine-kf 2s linear infinite;
 }
 
@@ -28,3 +30,45 @@
     }
 }
 
+.engine-blank{
+    width: 30vw;
+    height: 30vw;
+    top: 50%;
+    left: 33.33%;
+    transform: translate(-50%, -50%);
+    fill: styles.$shiny;
+}
+
+.coming-soon{
+    font-size: 1.5em;
+}
+
+@media (min-width: 576px) { 
+    .coming-soon{
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 768px) { 
+    .coming-soon{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 992px) {
+    .coming-soon{
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .coming-soon{
+        font-size: 4.5em;
+    }
+}
+
+@media (min-width: 1400px) {
+    .coming-soon{
+        font-size:6em;
+    }
+}
