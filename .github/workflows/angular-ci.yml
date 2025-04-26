@@ -1,0 +1,40 @@
+name: Angular CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: ng build
+
+      - name: Copy index.html to 404.html
+        run: cp ./dist/setupteam.github.io/index.html ./dist/setupteam.github.io/404.html
+      
+      - name: Generate CNAME file
+        run: echo "setupteam.dev" > ./dist/setupteam.github.io/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/setupteam.github.io
