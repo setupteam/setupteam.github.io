@@ -47,7 +47,8 @@ export class Animation{
     ){
         this.renderer = injector.get(RendererFactory2).createRenderer(null,null);
         this.config = {...DEFAULT_CONFIG, ...(config || {})};
-        this.allObjects = new Map(layers.map(f => [f.id(), f.elementRef.nativeElement]))
+        this.allObjects = new Map(layers.map(f => [f.id(), f.elementRef.nativeElement]));
+        this.allObjects.set("body", window.document.body);
     }
 
     get duration() {

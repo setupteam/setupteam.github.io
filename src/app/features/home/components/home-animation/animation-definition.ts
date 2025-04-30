@@ -536,6 +536,13 @@ export function generateHomeAnimationDefinition(): AnimationDefinition{
             styles: {
                 display: 'none'
             }
+        },
+        {
+            selector: "body",
+            at: at(7.5),
+            styles: {
+                backgroundColor: 'white'
+            }
         }
     ];
 
