@@ -1,0 +1,71 @@
+@use "../../../../styles.scss" as styles;
+
+.stdev-nav-item {
+    color: styles.$secondary;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 2px;
+
+        background-color: red;
+        opacity: 0;
+        transform: scale(0.9);
+        transform: center;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        padding-block: 1.25rem;
+        text-decoration: none;
+        fill: styles.$secondary;
+        color: inherit;
+        cursor: pointer;
+        transition: fill 0.3s ease;
+    }
+
+    &-label {
+        margin: 0;
+        color: inherit;
+        font-weight: 700;
+    }
+
+    span,
+    abbr{
+        transition: color 0.3s ease;
+    }
+
+    &:hover{
+        a{
+            fill: styles.$primary;
+        }
+
+        span,
+        abbr {
+            color: styles.$primary
+        }
+    }
+
+    &-active{
+        &::before{
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        span,
+        abbr {
+            color: cyan
+        }
+    }
+}

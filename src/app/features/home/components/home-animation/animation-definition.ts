@@ -43,7 +43,7 @@ const LOGO_ETUP_LETTERS = `${LOGO_ID} >> .logo-etup-letters`;
 const LOGO_EAM_LETTERS = `${LOGO_ID} >> .logo-eam-letters`;
 
 const LOGO_NAME = `${LOGO_ID} >> .logo-name`;
-const LOGO_BG = `${LOGO_ID} >> .logo-bg`;
+const LOGO_TOP_BLANK = `${LOGO_ID} >> .top-blank`;
 
 const ENGINE_G = `${LOGO_ID} >> .engine-g`;
 const ENGINE = `${LOGO_ID} >> .engine`;
@@ -491,26 +491,9 @@ export function generateHomeAnimationDefinition(): AnimationDefinition{
     const logoLayerAnim: AnimationDefinition = [
         {
             selector: PLAY_LOGO_ANIM_BTN,
-            at: at(0.01),
+            at: at(2),
             styles: {
                 opacity: '0',
-            }
-        },
-        {
-            selector: LOGO_BG,
-            timeframe: timeframe(8, 8.1),
-            from: {
-                top: "0"
-            },
-            to: {
-                top: "-100vh",
-            }
-        },
-        {
-            selector: LOGO_ID,
-            at: at(9.01),
-            styles: {
-                display: 'none',
             }
         },
     ];
@@ -547,6 +530,13 @@ export function generateHomeAnimationDefinition(): AnimationDefinition{
                 display: 'none',
             }
         },
+        {
+            selector: LOGO_TOP_BLANK,
+            at: at(7.5),
+            styles: {
+                display: 'none'
+            }
+        }
     ];
 
     return [

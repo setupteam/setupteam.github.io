@@ -41,14 +41,15 @@
     }
 }
 
-.logo-svg{
+.top-blank {
     position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
+    height: 25vh;
 }
 
-.logo-bg{
-    position: absolute;
+.logo-svg{
+    position: fixed;
     width: 100%;
     height: 100%;
 }

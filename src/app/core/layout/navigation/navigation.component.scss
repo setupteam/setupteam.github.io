@@ -1,0 +1,51 @@
+@use "../../../../styles.scss" as styles;
+
+:host{
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.st-logo{
+    width: 100px;
+}
+
+.stdev-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    backdrop-filter: blur(16px);
+    background-color: color-mix(in srgb, styles.$shiny 70%, transparent);
+    z-index: 250;
+    position: relative;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+    padding-block: 0;
+    box-sizing: border-box;
+    border-block-end: 1px black;
+
+    &-top{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+
+        li {
+            padding-inline: 0.875rem;
+        }
+    }
+}
+
+.stdev-nav-item-logo{
+    a {
+        height: 34px;
+        gap: 0.75;
+    }
+}
+
