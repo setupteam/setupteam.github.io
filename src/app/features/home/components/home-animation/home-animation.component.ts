@@ -40,8 +40,4 @@ export class HomeAnimationComponent implements OnDestroy{
   ngOnDestroy() {
     this.animation?.dispose();
   }
-
-  play(){
-    this.animation?.play();
-  }
 }
