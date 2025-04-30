@@ -1,9 +1,9 @@
-$primary: #220054;
+$primary: #220055;
 $secondary: #946AD4;
 $shiny: #CBA9FE;
 $alternative: #6538A9;
 $strong: #3F157F;
-$emphasis: #6538A9;
+$emphasis: #512594;;
 $complementary: #545100;
 $support: #235400;
 $serious: #000C54;
@@ -24,8 +24,8 @@ body{
     color: $primary;
 }
 
-.text-secondary-st{
-    color: $secondary;
+.text-emphasis{
+    color: $emphasis;
 }
 
 .bg-shiny{
@@ -34,4 +34,12 @@ body{
 
 .fill-shiny{
     fill: $shiny;
+}
+
+.fill-primary{
+    fill: $primary;
+}
+
+.fill-emphasis{
+    fill: $emphasis;
 }
