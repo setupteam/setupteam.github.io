@@ -1,0 +1,72 @@
+.st-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    border-style: solid;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: gray;
+    box-shadow: 0;
+
+    &-header {
+        display: flex;
+        padding: 16px 16px 0;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 16px;
+        }
+    }
+
+    &-title {
+        display: block;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    &-content {
+        display: block;
+        padding: 0 16px;
+
+        &:last-child{
+            padding-bottom: 16px;
+        }
+    }
+
+    &-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-bottom: 16px;
+    }
+}
+
+.member-card{
+    width: 90vw;
+}
+
+.member-avatar{
+    background-size: cover;
+}
+
+.honor-badge{
+    display: inline-block;
+    background: #f5c73d;
+    margin: 5px 3px;
+    padding: 4.2px 7.8px;
+    border-radius: 50px;
+    font-size: .8rem;
+}
+
+
+
+@media (min-width: 432px) {
+    .member-card{
+        width: 400px;
+    }
+}

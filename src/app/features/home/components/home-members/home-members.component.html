@@ -1,3 +1,12 @@
 <div style="min-height: 100vh;">
-    <img src="/assets/images/members-mock.jpg" alt="" class="m-auto d-flex w-100">
+    <img src="/assets/images/members-mock.jpg" alt="" class="m-auto d-none w-100">
+    
+   <div class="d-flex member-list">
+        <div>
+            <h1>Miembros del ST</h1>
+        </div>
+        @for (membera of members; track $index) {
+            <stdev-member-card  [member]="membera"></stdev-member-card>
+        }
+   </div>
 </div>

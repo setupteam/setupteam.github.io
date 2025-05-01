@@ -1,0 +1,67 @@
+@if (member) {
+    <div class="st-card member-card">
+        <div class="st-card-header">
+            <div 
+            class="st-card-avatar member-avatar" 
+            style="background-image: url('/assets/images/avatars/{{member.avatarURL}}');"></div>
+            <div class="st-card-header-text">
+                <h3 class="st-card-title m-auto">{{ member.name }}</h3>
+                @if (member.honorBadges) {
+                    <div>
+                        <ul  style="list-style: none; padding: 0; text-align: center;">
+                            @for (badge of member.honorBadges; track $index) {
+                                <li style="text-align: center; display: inline-block;">
+                                    <span class="honor-badge">{{ badge }}</span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="st-card-content">
+            @if (member.interests) {
+                <div>
+                    <ul>
+                        <li style="list-style: none;"><strong>Aficiones</strong></li>
+                        @for (interest of member.interests; track $index) {
+                            <li>{{ interest }}</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            @if (member.skills) {
+                <div>
+                    <ul>
+                        <li style="list-style: none;">
+                            <strong>Habilidades</strong>
+                        </li>
+                        @for (skill of member.skills; track $index) {
+                            <li>{{ skill }}</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            @if (member.experiences) {
+                <div>
+                    <ul>
+                        <li style="list-style: none;">
+                            <strong>Experiencias</strong>
+                        </li>
+                        @for (experience of member.experiences; track $index) {
+                            <li>{{ experience }}</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            @if (member.motto){
+                <blockquote style="text-align: center;">
+                    "{{ member.motto }}"
+                </blockquote>
+            }
+        </div>
+    </div>
+}
