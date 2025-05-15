@@ -55,6 +55,20 @@ export class HomeMembersComponent {
         skills: ["Sabe montar bicicleta",]
       },
       {
+        name: "LSinister",
+        honorBadges: ["Peligro al volante",],
+        avatarURL: "avatar.png",
+        interests: [
+          "Dark souls enjoyer",
+          "Adulto responsable",
+        ],
+        experiences: ["Jugador retirado de Valorant",],
+      },
+      {
+        name: "Juanxe",
+        avatarURL: "avatar.png",
+      },
+      {
         name: "Spirit",
         avatarURL: "avatar.png",
         interests: [
