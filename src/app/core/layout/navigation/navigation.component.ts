@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { EventType, Router, RouterLink } from '@angular/router';
-import { PagePrefix } from '../../enums/pages';
 
 @Component({
   selector: 'div.stdev-nav',
@@ -10,7 +9,7 @@ import { PagePrefix } from '../../enums/pages';
 })
 export class NavigationComponent {
   private readonly router = inject(Router);
-  readonly ESPORTS_ROUTE = PagePrefix.ESPORTS;
+
 
   ngOnInit(): void {
     this.router.events.subscribe(e => {
