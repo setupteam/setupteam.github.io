@@ -55,6 +55,22 @@ export class HomeMembersComponent {
         skills: ["Sabe montar bicicleta",]
       },
       {
+        name: "Spirit",
+        avatarURL: "avatar.png",
+        interests: [
+          "Valorant",
+          "Super Smash Bros",
+          "Programación",
+        ],
+      },
+      {
+        name: "Neinis",
+        avatarURL: "avatar.png",
+        interests: [
+          "Lenguas",
+        ],
+      },
+      {
         name: "LSinister",
         honorBadges: ["Peligro al volante",],
         avatarURL: "avatar.png",
@@ -67,15 +83,6 @@ export class HomeMembersComponent {
       {
         name: "Juanxe",
         avatarURL: "avatar.png",
-      },
-      {
-        name: "Spirit",
-        avatarURL: "avatar.png",
-        interests: [
-          "Valorant",
-          "Super Smash Bros",
-          "Programación",
-        ],
       },
     ])
   }
