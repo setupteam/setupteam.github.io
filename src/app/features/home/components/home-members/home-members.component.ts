@@ -12,16 +12,18 @@ export class HomeMembersComponent {
   members:Member[]= [];
 
   constructor(){
-    this.members.push(...[
+    const ms: Member[] = [
       {
         name: "Monster",
         avatarURL: "av-monster.jpeg",
-        honorBadges: ["Papá de Eros",],
+        honorBadges: [
+          { title:"Papá de Eros", bgColor: "#c9b783", textColor: "black" },
+          { title:"Backend Developer", bgColor: "#9283c9", textColor: "white" },
+        ],
         interests: [
           "Amante de la F1",
-          "Backend developer en mi tiempo libre",
         ],
-        experiences: [
+        history: [
           "Ex jugador profesional de voleibol",
         ],
         skills: ["Main Raze",],
@@ -36,10 +38,27 @@ export class HomeMembersComponent {
         motto: "Consagren sus corazones",
       },
       {
+        name: "Neinis",
+        avatarURL: "avatar.png",
+        interests: [
+          "Lenguas",
+          "Videojuegos"
+        ],
+        skills: [
+          "Experto en Crash Team Racing",
+          "Experto en Dragon Ball BT3",
+          "Guitarra",
+        ],
+        motto: "Siempre Valito, nunca LOL",
+        honorBadges: [
+          { title: "Guitarrista de Nefelibata", bgColor: "#3f1515", textColor: "white" }
+        ]
+      },
+      {
         name: "Mando",
         avatarURL: "avatar.png",
-        experiences: [
-          "Explatino que se rompió la rodilla y no pudo llegar a radiant",
+        history: [
+          "Ex-platino que se rompió la rodilla y no pudo llegar a radiant",
         ],
       },
       {
@@ -62,28 +81,31 @@ export class HomeMembersComponent {
           "Super Smash Bros",
           "Programación",
         ],
-      },
-      {
-        name: "Neinis",
-        avatarURL: "avatar.png",
-        interests: [
-          "Lenguas",
-        ],
+        socialMedia: [
+          { link: "https://afcr.dev/", name: "Portafolio: afcr.dev" }
+        ]
       },
       {
         name: "LSinister",
-        honorBadges: ["Peligro al volante",],
+        honorBadges: [
+          { title: "Peligro al volante", bgColor: "#cca36e", textColor: "black" },
+          { title: "Adulto responsable", bgColor: "#6ecc8a", textColor: "black" },
+        ],
         avatarURL: "avatar.png",
         interests: [
           "Dark souls enjoyer",
-          "Adulto responsable",
         ],
-        experiences: ["Jugador retirado de Valorant",],
+        history: ["Jugador retirado de Valorant",],
       },
       {
         name: "Juanxe",
         avatarURL: "avatar.png",
+        history: [
+          "Miembro en Valorant 25"
+        ]
       },
-    ])
+    ]; 
+
+    this.members.push(...ms);
   }
 }

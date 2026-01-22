@@ -43,3 +43,16 @@ body{
 .fill-emphasis{
     fill: $emphasis;
 }
+
+a.text-decoration-none{
+    text-decoration: none;
+    color: $base;
+}
+
+ul.no-style {
+    list-style-type: none;
+}
+
+ul.list-inline li{
+    display: inline-block;
+}

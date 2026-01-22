@@ -5,8 +5,8 @@
         <div>
             <h1>Miembros del ST</h1>
         </div>
-        @for (membera of members; track $index) {
-            <stdev-member-card  [member]="membera"></stdev-member-card>
+        @for (member of members; track $index) {
+            <stdev-member-card  [member]="member"></stdev-member-card>
         }
    </div>
 </div>

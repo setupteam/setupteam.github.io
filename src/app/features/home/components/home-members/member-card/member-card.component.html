@@ -11,7 +11,11 @@
                         <ul  style="list-style: none; padding: 0; text-align: center;">
                             @for (badge of member.honorBadges; track $index) {
                                 <li style="text-align: center; display: inline-block;">
-                                    <span class="honor-badge">{{ badge }}</span>
+                                    <span class="honor-badge" 
+                                        [style.background]="badge.bgColor" 
+                                        [style.color]="badge.textColor">
+                                        {{ badge.title }}
+                                    </span>
                                 </li>
                             }
                         </ul>
@@ -44,23 +48,37 @@
                 </div>
             }
 
-            @if (member.experiences) {
+            @if (member.motto){
+                <blockquote style="text-align: center;">
+                    "{{ member.motto }}"
+                </blockquote>
+            } 
+
+            @if (member.history) {
                 <div>
                     <ul>
                         <li style="list-style: none;">
-                            <strong>Experiencias</strong>
+                            <strong>Historial</strong>
                         </li>
-                        @for (experience of member.experiences; track $index) {
+                        @for (experience of member.history; track $index) {
                             <li>{{ experience }}</li>
                         }
                     </ul>
                 </div>
             }
 
-            @if (member.motto){
-                <blockquote style="text-align: center;">
-                    "{{ member.motto }}"
-                </blockquote>
+            @if (member.socialMedia && member.socialMedia.length > 0) {
+                <div>
+                    <ul class="no-style">
+                        <li style="list-style: none;">
+                            <strong>Redes</strong>
+                        </li>
+                        @for (sm of member.socialMedia; track $index) {
+                            <li><a class="text-decoration-none"
+                                [href]="sm.link" target="_blank">{{ sm.name }}</a></li>
+                        }
+                    </ul>
+                </div>
             }
         </div>
     </div>
